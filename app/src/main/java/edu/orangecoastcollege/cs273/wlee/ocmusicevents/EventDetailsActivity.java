@@ -17,12 +17,12 @@ public class EventDetailsActivity extends AppCompatActivity {
 
     private ImageView eventImageView; // step 1
 
-    private TextView eventTitleTextView = (TextView) findViewById(R.id.eventTitleTextView);
-    private TextView eventDateDayTextView = (TextView) findViewById(R.id. eventDateDayTextView);
-    private TextView eventTimeTextView = (TextView) findViewById(R.id. eventTimeTextView);
-    private TextView eventLocationTextView = (TextView) findViewById(R.id. eventLocationTextView);
-    private TextView eventAddress1TextView = (TextView) findViewById(R.id. eventAddress1TextView);
-    private TextView eventAddress2TextView = (TextView) findViewById(R.id. eventAddress2TextView);
+    private TextView eventTitleTextView;
+    private TextView eventDateDayTextView;
+    private TextView eventTimeTextView;
+    private TextView eventLocationTextView;
+    private TextView eventAddress1TextView;
+    private TextView eventAddress2TextView;
 
     // In order to use AssetManager, need to know Context // Step 5-1
     private Context context = (Context) this;
@@ -31,6 +31,13 @@ public class EventDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details); // Step 3
+
+        eventTitleTextView = (TextView) findViewById(R.id.eventTitleTextView);
+        eventDateDayTextView = (TextView) findViewById(R.id. eventDateDayTextView);
+        eventTimeTextView = (TextView) findViewById(R.id. eventTimeTextView);
+        eventLocationTextView = (TextView) findViewById(R.id. eventLocationTextView);
+        eventAddress1TextView = (TextView) findViewById(R.id. eventAddress1TextView);
+        eventAddress2TextView = (TextView) findViewById(R.id. eventAddress2TextView);
 
         // Get the data from Intent // Step 4
         Intent detailsIntent = getIntent();
